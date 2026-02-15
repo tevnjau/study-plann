@@ -19,3 +19,14 @@ footer {
   background: #ddd;
   padding: 10px;
 }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
