@@ -62,3 +62,34 @@ form button {
 form button:hover {
   background: #2980b9;
 }
+#taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.task {
+  background: white;
+  padding: 12px 35px 30px 35px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  opacity: 0.8;
+}
