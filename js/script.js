@@ -21,12 +21,37 @@ function displayTasks() {
     btn.onclick = () => {
       tasks.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(tasks));
-      displayTasks(); // redraw instantly
+      displayTasks(); 
     };
 
     div.appendChild(text);
     div.appendChild(btn);
 
     taskList.appendChild(div);
+  });
+}
+
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById("title").value.trim();
+    const date = document.getElementById("date").value;
+    const error = document.getElementById("error");
+
+    if (!title || !date) {
+      error.textContent = "All fields required!";
+      return;
+    }
+
+    error.textContent = "";
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.push({ title, date });
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    form.reset();
+    displayTasks(); 
   });
 }
