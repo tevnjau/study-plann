@@ -55,3 +55,5 @@ if (form) {
     displayTasks(); 
   });
 }
+
+displayTasks();
