@@ -117,3 +117,22 @@ form button:hover {
   font-size: 18px;
   color: gray;
 }
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: white;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #3498db;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(52,152,219,0.5);
+}
