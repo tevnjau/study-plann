@@ -8,6 +8,11 @@ function displayTasks() {
 
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+  if (tasks.length === 0) {
+    taskList.innerHTML = "<p class='empty'>You have no tasks</p>";
+    return;
+  }
+
   tasks.forEach((task, index) => {
     const div = document.createElement("div");
     div.className = "task";
