@@ -16,9 +16,14 @@
   </nav>
     </header>
     <form id="taskForm">
-  <input type="text" id="title" placeholder="Task title" required><br>
-  <input type="date" id="date" required><br>
-  <button type="submit">Add Task</button><br>
+        <input type="text" id="assignment" placeholder="Assignment name">
+        <input type="date" id="date">
+           <select id="urgency">
+            <option value="">Select urgency</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+             <option value="high">High</option>
+            </select>
       <p id="error"></p>
     </form>
     <div id="taskList"></div>
