@@ -15,7 +15,7 @@ function displayTasks() {
 
   tasks.forEach((task, index) => {
     const div = document.createElement("div");
-    div.className = "task";
+    div.className = `task ${task.urgency}`;
 
     const text = document.createElement("span");
     text.textContent = `${task.title} — ${task.date}`;
