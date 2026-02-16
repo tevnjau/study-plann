@@ -42,9 +42,10 @@ if (form) {
 
     const title = document.getElementById("title").value.trim();
     const date = document.getElementById("date").value;
+    const urgency = document.getElementById("urgency").value;
     const error = document.getElementById("error");
 
-    if (!title || !date) {
+    if (!title || !date || !urgency) {
       error.textContent = "All fields required!";
       return;
     }
@@ -52,7 +53,7 @@ if (form) {
     error.textContent = "";
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks.push({ title, date });
+    tasks.push({ title, date, urgency });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
